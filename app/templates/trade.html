@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Trade</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.symbol.label }}<br>
+            {{ form.symbol }}
+            {% for error in form.symbol.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.shares.label }}<br>
+            {{ form.shares }}
+            {% for error in form.shares.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.transaction_type.label }}<br>
+            {{ form.transaction_type }}
+            {% for error in form.transaction_type.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    {% if last_trade %}
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Transaction Type</th>
+        </tr>
+        <tr>
+            <td>{{ last_trade.symbol }}</td>
+            <td>{{ last_trade.shares }}</td>
+            <td>{{ last_trade.transaction_type }}</td>
+        </tr>
+    </table>
+    {% endif %}
+{% endblock %}

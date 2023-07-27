@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #50b3a2;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+
+.flash-messages .error-msg, span[style="color: red;"] {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    text-align: left;
+    padding: 8px;
+    border: none;
+}
+
+th {
+    background-color: #50b3a2;
+}
+
+th {
+    color: white;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.trade-container h1 {
+    width: 100%;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form select,
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.flash-message {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+
+
+
+/* HOME PAGE */
+
+.home-content {
+    text-align: center;
+    padding: 100px;
+    margin-top: 100px;
+}
+
+.home-content h1 {
+    color: #50b3a2;
+    font-size: 2em;
+}
+
+.home-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.home-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-button {
+    display: inline-block;
+    color: #fff;
+    background-color: #50b3a2;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #e8491d;
+}
+
+
+
+/* STOCK INFO PAGE */
+
+.stock-info {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.stock-info h1 {
+    color: #50b3a2;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.stock-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.stock-info form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.stock-info input[name="symbol"] {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.stock-info input[type="submit"] {
+    width: 100px;
+    padding: 10px;
+    color: #fff;
+    background-color: #50b3a2;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.stock-info input[type="submit"]:hover {
+    background-color: #e8491d;
+}

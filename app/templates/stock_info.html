@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Stock Info{% endblock %}
+
+{% block content %}
+<div class="stock-info">
+    <h1>Stock Info</h1>
+
+    {% if info %}
+        <p>Symbol: {{ info['symbol'] }}</p>
+        <p>Company: {{ info['shortName'] }}</p>
+        <p>Current price: {{ info['regularMarketPrice'] }}</p>
+        <p>Market Cap: {{ info['marketCap'] }}</p>
+        <p>Previous Close: {{ info['regularMarketPreviousClose'] }}</p>
+        <p>Open: {{ info['regularMarketOpen'] }}</p>
+        <p>Volume: {{ info['regularMarketVolume'] }}</p>
+    {% else %}
+        <form method="GET">
+            <input name="symbol" placeholder="Symbol">
+            <input type="submit" value="Search">
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

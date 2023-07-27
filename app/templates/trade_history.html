@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Trade History{% endblock %}
+
+{% block content %}
+<div class="trade-container">
+<h1>Trade History</h1>
+</div>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Symbol</th>
+        <th>Type</th>
+        <th>Shares</th>
+        <th>Price per Share</th>
+        <th>Total Price</th>
+        <th>Gain/Loss</th>
+    </tr>
+    {% for trade in trades %}
+        <tr>
+            <td>{{ trade.date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>{{ trade.symbol }}</td>
+            <td>{{ trade.transaction_type.capitalize() }}</td>
+            <td>{{ trade.shares }}</td>
+            <td>{{ trade.price }}</td>
+            <td>{{ trade.price * trade.shares }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
